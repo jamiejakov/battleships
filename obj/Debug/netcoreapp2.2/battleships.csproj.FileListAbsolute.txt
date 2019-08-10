@@ -1,0 +1,11 @@
+/Users/jamiejakov/Dev/TEST/battleships/bin/Debug/netcoreapp2.2/battleships.deps.json
+/Users/jamiejakov/Dev/TEST/battleships/bin/Debug/netcoreapp2.2/battleships.runtimeconfig.json
+/Users/jamiejakov/Dev/TEST/battleships/bin/Debug/netcoreapp2.2/battleships.runtimeconfig.dev.json
+/Users/jamiejakov/Dev/TEST/battleships/bin/Debug/netcoreapp2.2/battleships.dll
+/Users/jamiejakov/Dev/TEST/battleships/bin/Debug/netcoreapp2.2/battleships.pdb
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.csprojAssemblyReference.cache
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.csproj.CoreCompileInputs.cache
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.AssemblyInfoInputs.cache
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.AssemblyInfo.cs
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.dll
+/Users/jamiejakov/Dev/TEST/battleships/obj/Debug/netcoreapp2.2/battleships.pdb
