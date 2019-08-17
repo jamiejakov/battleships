@@ -44,6 +44,7 @@ namespace Battleship.Tests
     {
       var cell = new Cell('A', 1);
       var shipCells = new List<Cell>() { cell };
+      new Ship(shipCells);
 
       var result = cell.hit();
 

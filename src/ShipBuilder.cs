@@ -22,6 +22,8 @@ namespace Battleship
         {
           var newLocation = map[startKeyCol][i - 1];
           newLocations.Add(newLocation);
+
+          checkForExistingShip(newLocation);
         }
 
         return new Ship(newLocations);
@@ -40,6 +42,8 @@ namespace Battleship
           var letter = Convert.ToChar(i);
           var newLocation = map[letter][startKeyRow - 1];
           newLocations.Add(newLocation);
+
+          checkForExistingShip(newLocation);
         }
 
         return new Ship(newLocations);
@@ -53,6 +57,14 @@ namespace Battleship
       if (endKey > Constants.BOARD_SIZE)
       {
         throw new Exception("Ship will go out of bounds of the board.");
+      }
+    }
+
+    static void checkForExistingShip(Cell cell)
+    {
+      if (cell.Ship != null)
+      {
+        throw new Exception("2 ships can not be placed on the same cell");
       }
     }
   }

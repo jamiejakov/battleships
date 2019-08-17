@@ -76,6 +76,18 @@ namespace Battleship.Tests
     }
 
     [Test]
+    public void BuildShip_ShipsShouldNotOverlap()
+    {
+      var map = BoardBuilder.buildBoard(Constants.BOARD_SIZE).Map;
+
+      ShipBuilder.buildShip(map, "A1", 2, Constants.DIRECTION_VERTICAL);
+      TestDelegate buildShipDelegate = () => ShipBuilder.buildShip(map, "A2", 2, Constants.DIRECTION_HORIZONTAL); ;
+
+      var exception = Assert.Throws<Exception>(buildShipDelegate);
+      Assert.AreEqual(exception.Message, "2 ships can not be placed on the same cell");
+    }
+
+    [Test]
     public void BuildShip_UnknownDirection_ShouldThrow()
     {
       var map = BoardBuilder.buildBoard(Constants.BOARD_SIZE).Map;
