@@ -5,7 +5,7 @@ namespace Battleship
 {
   public static class InputReader
   {
-    public static char getActionInput(Board board, List<Ship> ships)
+    public static char getActionInput(Board board)
     {
       char input;
       Console.WriteLine("");
@@ -19,7 +19,7 @@ namespace Battleship
       {
         Console.WriteLine("'b' - Create a battleship");
 
-        if (ships.Count > 0)
+        if (board.Ships.Count > 0)
         {
           Console.WriteLine("'a' - Attack a position on the board");
         }

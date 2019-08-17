@@ -9,11 +9,9 @@ namespace Battleship
     public Game()
     {
       this.Board = null;
-      this.Ships = new List<Ship>();
     }
 
     Board Board;
-    List<Ship> Ships;
 
     public void start()
     {
@@ -27,7 +25,7 @@ namespace Battleship
           return;
         }
 
-        input = InputReader.getActionInput(Board, Ships);
+        input = InputReader.getActionInput(Board);
 
         switch (input)
         {
@@ -46,12 +44,7 @@ namespace Battleship
 
     bool isGameOver()
     {
-      return Board != null && Ships.Count != 0 && areAllShipsSunk();
-    }
-
-    bool areAllShipsSunk()
-    {
-      return Ships.Count(ship => ship.isSunk()) >= Ships.Count;
+      return Board != null && Board.areAllShipsSunk();
     }
 
     void buildMap()
@@ -78,7 +71,7 @@ namespace Battleship
 
       var ship = ShipBuilder.buildShip(Board.Map, startKey, length, direction);
 
-      Ships.Add(ship);
+      Board.Ships.Add(ship);
     }
 
     void attackShip()
@@ -88,7 +81,7 @@ namespace Battleship
         throw new Exception("No Battleship board created. Create a board before attacking.");
       }
 
-      if (Ships.Count <= 0)
+      if (Board.Ships.Count <= 0)
       {
         throw new Exception("No Battleship have been added to the board. Please add some ships before attacking.");
       }
