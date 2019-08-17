@@ -31,7 +31,6 @@ namespace Battleship
         return HitCellResponse.MISS;
       }
 
-      Ship.hit();
       IsHit = true;
       return HitCellResponse.HIT;
     }
