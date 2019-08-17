@@ -1,11 +1,11 @@
 ﻿namespace battleships
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            var game = new Game();
-            game.start();
-        }
+      var game = new Game();
+      game.start();
     }
+  }
 }

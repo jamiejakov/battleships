@@ -7,4 +7,6 @@ public static class Constants
   public const char ACTION_BUILD_SHIP = 'b';
   public const char ACTION_ATTACK_SHIP = 'a';
   public const char ACTION_EXIT = 'x';
+
+  public const int BOARD_SIZE = 10;
 }
