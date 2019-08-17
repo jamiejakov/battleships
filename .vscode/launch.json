@@ -9,9 +9,9 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/battleships.dll",
+      "program": "${workspaceFolder}/bin/netcoreapp2.2/battleships.dll",
       "args": [],
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceRoot}/src",
       "console": "externalTerminal",
       "stopAtEntry": false,
       "internalConsoleOptions": "openOnSessionStart"

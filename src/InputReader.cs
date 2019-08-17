@@ -59,7 +59,7 @@ namespace Battleship
       char direction = ' ';
       var loopCount = 0;
 
-      while (direction != Constants.DIRECTION_HORIZONTAL || direction != Constants.DIRECTION_VERTICAL)
+      while (direction != Constants.DIRECTION_HORIZONTAL && direction != Constants.DIRECTION_VERTICAL)
       {
         if (loopCount != 0)
         {
