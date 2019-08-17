@@ -1,4 +1,4 @@
-﻿namespace battleships
+﻿namespace Battleship
 {
   class Program
   {

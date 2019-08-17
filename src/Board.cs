@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 
-public class Board
+namespace Battleship
 {
-  public Board(Dictionary<char, List<Cell>> map)
+  public class Board
   {
-    this.Map = map;
+    public Board(Dictionary<char, List<Cell>> map)
+    {
+      this.Map = map;
+    }
+
+    public Dictionary<char, List<Cell>> Map;
   }
 
-  public Dictionary<char, List<Cell>> Map;
 }
-

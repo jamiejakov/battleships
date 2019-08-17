@@ -1,25 +1,27 @@
 using System;
 using System.Collections.Generic;
-
-static class MapBuilder
+namespace Battleship
 {
-  public static Board buildBoard(int size)
+  static class MapBuilder
   {
-    var map = new Dictionary<char, List<Cell>> { };
-
-    for (var i = 0; i < size; i++)
+    public static Board buildBoard(int size)
     {
-      var letter = Convert.ToChar(i + 65);
-      var cells = new List<Cell>();
+      var map = new Dictionary<char, List<Cell>> { };
 
-      for (var j = 1; j <= size; j++)
+      for (var i = 0; i < size; i++)
       {
-        cells.Add(new Cell(letter, j));
+        var letter = Convert.ToChar(i + 65);
+        var cells = new List<Cell>();
+
+        for (var j = 1; j <= size; j++)
+        {
+          cells.Add(new Cell(letter, j));
+        }
+
+        map.Add(letter, cells);
       }
 
-      map.Add(letter, cells);
+      return new Board(map);
     }
-
-    return new Board(map);
   }
 }

@@ -1,34 +1,38 @@
 using System.Collections.Generic;
 
-public class Ship
+namespace Battleship
 {
-  public Ship(List<Cell> cells)
+  public class Ship
   {
-    this.Cells = cells;
-    this.HitCount = 0;
-
-    place();
-  }
-
-  public List<Cell> Cells;
-  public int HitCount;
-
-  public void hit()
-  {
-    this.HitCount += 1;
-  }
-
-  public bool isSunk()
-  {
-    return this.HitCount >= this.Cells.Count;
-  }
-
-  void place()
-  {
-    foreach (var cell in Cells)
+    public Ship(List<Cell> cells)
     {
-      cell.Ship = this;
+      this.Cells = cells;
+      this.HitCount = 0;
+
+      place();
+    }
+
+    public List<Cell> Cells;
+    public int HitCount;
+
+    public void hit()
+    {
+      this.HitCount += 1;
+    }
+
+    public bool isSunk()
+    {
+      return this.HitCount >= this.Cells.Count;
+    }
+
+    void place()
+    {
+      foreach (var cell in Cells)
+      {
+        cell.Ship = this;
+      }
     }
   }
-}
 
+
+}

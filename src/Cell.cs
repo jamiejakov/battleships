@@ -1,43 +1,47 @@
-public class Cell
+namespace Battleship
 {
-  public Cell(char column, int row)
+  public class Cell
   {
-    this.Row = row;
-    this.Column = column;
-    this.Key = "" + column + row;
-    this.Ship = null;
-    this.IsHit = false;
-  }
-
-  public int Row;
-  public char Column;
-  public string Key;
-
-  public Ship Ship;
-
-  public bool IsHit;
-
-  public HitCellResponse hit()
-  {
-    if (IsHit)
+    public Cell(char column, int row)
     {
-      return HitCellResponse.ERROR;
+      this.Row = row;
+      this.Column = column;
+      this.Key = "" + column + row;
+      this.Ship = null;
+      this.IsHit = false;
     }
 
-    if (Ship == null)
+    public int Row;
+    public char Column;
+    public string Key;
+
+    public Ship Ship;
+
+    public bool IsHit;
+
+    public HitCellResponse hit()
     {
-      return HitCellResponse.MISS;
+      if (IsHit)
+      {
+        return HitCellResponse.ERROR;
+      }
+
+      if (Ship == null)
+      {
+        return HitCellResponse.MISS;
+      }
+
+      Ship.hit();
+      IsHit = true;
+      return HitCellResponse.HIT;
     }
-
-    Ship.hit();
-    IsHit = true;
-    return HitCellResponse.HIT;
   }
-}
 
-public enum HitCellResponse
-{
-  HIT,
-  MISS,
-  ERROR
+  public enum HitCellResponse
+  {
+    HIT,
+    MISS,
+    ERROR
+  }
+
 }
