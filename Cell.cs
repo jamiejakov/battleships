@@ -16,4 +16,28 @@ public class Cell
   public Ship Ship;
 
   public bool IsHit;
+
+  public HitCellResponse hit()
+  {
+    if (IsHit)
+    {
+      return HitCellResponse.ERROR;
+    }
+
+    if (Ship == null)
+    {
+      return HitCellResponse.MISS;
+    }
+
+    Ship.hit();
+    IsHit = true;
+    return HitCellResponse.HIT;
+  }
+}
+
+public enum HitCellResponse
+{
+  HIT,
+  MISS,
+  ERROR
 }
