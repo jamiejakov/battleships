@@ -11,5 +11,6 @@ namespace Battleship
     public const char ACTION_EXIT = 'x';
 
     public const int BOARD_SIZE = 10;
+    public const int FIRST_LETTER_CHAR_VALUE = 65;
   }
 }

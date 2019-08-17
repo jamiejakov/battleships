@@ -84,7 +84,7 @@ namespace Battleship
         throw new Exception("Battleship board has already been created, can not create another board.");
       }
 
-      this.Board = MapBuilder.buildBoard(Constants.BOARD_SIZE);
+      this.Board = BoardBuilder.buildBoard(Constants.BOARD_SIZE);
       Console.WriteLine("Battleship board has been created");
     }
 

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace Battleship
 {
-  static class MapBuilder
+  public static class BoardBuilder
   {
     public static Board buildBoard(int size)
     {
@@ -10,7 +10,7 @@ namespace Battleship
 
       for (var i = 0; i < size; i++)
       {
-        var letter = Convert.ToChar(i + 65);
+        var letter = Convert.ToChar(i + Constants.FIRST_LETTER_CHAR_VALUE);
         var cells = new List<Cell>();
 
         for (var j = 1; j <= size; j++)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Battleship
 {
-  static class ShipBuilder
+  public static class ShipBuilder
   {
     public static Ship buildShip(Dictionary<char, List<Cell>> map, string startKey, int length, char direction)
     {
@@ -33,7 +33,7 @@ namespace Battleship
         var startNum = Convert.ToInt32(startKeyCol);
         var endNum = startNum + length;
 
-        validateShipSize(endNum);
+        validateShipSize(endNum - Constants.FIRST_LETTER_CHAR_VALUE);
 
         for (var i = startNum; i < endNum; i++)
         {
